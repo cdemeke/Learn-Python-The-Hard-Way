@@ -1,3 +1,13 @@
+##########################################################
+# This is a rock paper sissors game
+# The objective of the game is as follows
+#  1.  The user enters the # of games they'd like to play.
+#  2.  The user is requested to input their guess 'rock' 'paper' 'sissors'.
+#  3.  The computer generates a random value from a list as it's guess.
+#  4.  The Calculate method in CalculateWinner will determine which guess wins.
+#  5.  The game loops over again until it meets the user input of # of games @ step  1.
+##########################################################
+
 import random
 
 class RockPaperSissorsEngine (object):
@@ -29,7 +39,7 @@ class RockPaperSissorsEngine (object):
 			# instantiate CalculateWinner class
 			self.request = CalculateWinner()
 
-			# get user input
+			# get user input 
 			userInput = self.request.UserInput()
 
 			# get computer input

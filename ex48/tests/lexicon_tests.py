@@ -4,14 +4,19 @@ from ex48 import lexicon
 
 def test_directions():
     assert_equal(lexicon.scan("north"), [('direction', 'north')])
-    result = lexicon.scan("north south east")
-    assert_equal(result, [('direction', 'north'),
+    result = lexicon.scan("north south east WEST") # testing capital case
+    assert_equal(result, [
+                          ('direction', 'north'),
                           ('direction', 'south'),
-                          ('direction', 'east')])
+                          ('direction', 'east'),
+                          ('direction', 'west'), # added the west direction test
+
+
+                          ])
 
 def test_verbs():
     assert_equal(lexicon.scan("go"), [('verb', 'go')])
-    result = lexicon.scan("go kill eat")
+    result = lexicon.scan("go kill EAT")
     assert_equal(result, [('verb', 'go'),
                           ('verb', 'kill'),
                           ('verb', 'eat')])
@@ -39,8 +44,8 @@ def test_numbers():
 
 
 def test_errors():
-    assert_equal(lexicon.scan("ASDFADFASDF"), [('error', 'ASDFADFASDF')])
+    assert_equal(lexicon.scan("ASDFADFASDF"), [('error', 'asdfadfasdf')])
     result = lexicon.scan("bear IAS princess")
     assert_equal(result, [('noun', 'bear'),
-                          ('error', 'IAS'),
+                          ('error', 'ias'),
                           ('noun', 'princess')])

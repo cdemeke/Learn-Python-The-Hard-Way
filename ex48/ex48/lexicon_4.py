@@ -23,6 +23,14 @@ def convert_number(s):
         return int(s)
     except ValueError:
         return s
+        
+# Find another way to convert the number.
+
+def anotherway_convert_number(s):
+	if s == int(s)
+		return int(s)
+	else 
+		return s
 
 def scan (sentence):
 	words = sentence.lower()
@@ -31,7 +39,7 @@ def scan (sentence):
 	result = []
 
 	for word in words:
-		word = convert_number(word) # checks if its a #
+		word = anotherway_convert_number(word) # checks if its a #
 		pair = (lexicon[word], word)
 		result.append(pair)
 
