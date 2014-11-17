@@ -9,6 +9,6 @@ Link to class - http://learnpythonthehardway.org/book/
 
 To run code all you need to do is open a specific exercice (ex. ex2) in termainal and run
 
-'''
+```
 python ex2.py
-'''
+```
